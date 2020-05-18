@@ -57,6 +57,75 @@ ul {
   color: #fff;
 }
 
+input:focus,
+textarea:focus{
+  background-color: rgba(255, 217,0, 0.6);
+  outline:0;
+}
+input, button{
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #000000;
+}
+textarea{
+  width: 100%;
+  border: 1px solid #000000;
+}
+.wrapper{
+  border: 1px solid #000000;
+}
+.wrapper > *{
+  padding: 2em;
+}
+
+@media (min-width: 700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:20px;
+}
+form label{
+  display: block;
+}
+form p{
+  margin: 0;
+  line-height: 2;
+}
+.full-width{
+  grid-column: 1 / 3;
+}
+button, input, textarea{
+padding: 1em;
+}
+button{
+  background-color: lightgray;
+  cursor: pointer;
+}
+button:hover, button:focus{
+  background-color: gold;
+  outline: 0;
+}
+
+/* Stili per la validazione */
+input:required:invalid{
+  border-bottom: gray;
+  color: red;
+}
+textarea:required:invalid{
+color: red;
+}
+input:required:valid,
+textarea:required:valid{
+  border-color: green;
+}
+
+
 /* FINE START */
 
  </style>
@@ -80,32 +149,32 @@ ul {
     <div class="form-inputs">
       <h3>Mandaci un messaggio</h3>
 
-      <form action="paginachenonesiste.php">
+      <form action="paginachenonesiste.php" method="GET">
         <p>
           <label for="">Ti chiami</label>
-          <input type="text" name="nome" placeholder="tuo Nome e Cognome">
+          <input type="text" name="nome" placeholder="tuo Nome e Cognome" required>
         </p>
         <p>
           <label for="">Cell/Whatsapp</label>
-          <input type="tel" name="tel" placeholder="tuo cellulare">
+          <input type="tel" name="tel" placeholder="tuo cellulare" required>
         </p>
         <p>
           <label for="">Email</label>
-          <input type="email" name="email" placeholder="email">
+          <input type="email" name="email" placeholder="email" required>
         </p>
         <p>
           <label for="">Argomento</label>
-          <input type="text" name="argomento" placeholder="di cosa vuoi parlare">
+          <input type="text" name="argomento" placeholder="di cosa vuoi parlare" required>
         </p>
         <p class="full-width">
           <label for="">Scrivici un messaggio</label>
-          <textarea name="messaggio" id="message" cols="30" rows="7"></textarea>
+          <textarea name="messaggio" id="message" cols="30" rows="7" required></textarea>
         </p>
         <p class="full-width">
-          <button>INVIA</button>
+          <button type="submit">INVIA</button>
         </p>
       </form>
-      
+
     </div>
   </div>
 </div>
