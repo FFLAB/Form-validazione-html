@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it" >
+<head>
+  <meta charset="UTF-8">
+  <title>Mia Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- 
+    Form con GRID
+    https://www.the-art-of-web.com/html/html5-form-validation/
+  
+    INFO su input e form -->
+        <!-- 
+        Elemento di input 
+        type: tipo di input
+        placeholder: testo segnaposto (HTML5)
+        value: se voglio un valore predefinito
+        name: nome della variabile in fase di submit
+        required: campo a compilazione obbligatoria (via HTML)
+    	-->
+  
+        <!-- checked: casella già selezionata -->
+     
+        
+        <!-- Pulsanti 
+		type submit: (predefinito) invia la form
+		type reset: pulisce tutti i campi dai dati inseriti
+		type button: non fa niente a livello html (per customizzazione con Javascript)
+    	-->
+ 
+ <style>
+/* START */
+     * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 1rem;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacts {
+  background: #4b5195;
+  color: #fff;
+}
+
+/* FINE START */
+
+ </style>
+
+</head>
+<body>
+
+<div class="container">
+<h1>FORM SUPERCALIFRAGILISTICHESPIRALIDOSA</h1>
+  <div class="wrapper">
+    <div class="contacts">
+      <h3>I nostri contatti</h3>
+
+      <ul>
+        <li>Mohole</li>
+        <li>02 12345678</li>
+        <li>scuola@mohole.it</li>
+      </ul>
+    </div>
+
+    <div class="form-inputs">
+      <h3>Mandaci un messaggio</h3>
+
+      <form action="paginachenonesiste.php">
+        <p>
+          <label for="">Ti chiami</label>
+          <input type="text" name="nome" placeholder="tuo Nome e Cognome">
+        </p>
+        <p>
+          <label for="">Cell/Whatsapp</label>
+          <input type="tel" name="tel" placeholder="tuo cellulare">
+        </p>
+        <p>
+          <label for="">Email</label>
+          <input type="email" name="email" placeholder="email">
+        </p>
+        <p>
+          <label for="">Argomento</label>
+          <input type="text" name="argomento" placeholder="di cosa vuoi parlare">
+        </p>
+        <p class="full-width">
+          <label for="">Scrivici un messaggio</label>
+          <textarea name="messaggio" id="message" cols="30" rows="7"></textarea>
+        </p>
+        <p class="full-width">
+          <button>INVIA</button>
+        </p>
+      </form>
+      
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
